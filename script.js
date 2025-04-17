@@ -143,6 +143,9 @@ function togglePlayPause() {
         // 初始化可视化效果（如果尚未初始化）
         if (!isVisualizerInitialized) {
             initVisualizer();
+        } else {
+            // 如果已经初始化，只需要重新开始绘制
+            drawVisualizer();
         }
     } else {
         audioPlayer.pause();
